@@ -23,27 +23,16 @@ def find_mismatch(text):
         if next in ")]}":
             # Process closing bracket, write your code here
             
-            if not opening_brackets_stack:
+            if not opening_brackets_stack or not are_matching_stack(opening_brackets_stack[-1].char, next):
                 
                 return i+1
         
-        else: 
-
-            top = opening_brackets_stack.pop()
+         opening_brackets_stack.pop()
             
-            if not are_matching(top.char, next):
-                
-                return i+1
+            
     
     
-    if opening_brackets_stack:
-        
-        top = opening_brackets_stack.pop()
-        
-        return top.position+1    
-    
-    return "Success"
-        
+   
 
 def main():
     text = input()
