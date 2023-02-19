@@ -59,7 +59,7 @@ def main():
     
     if not mismatch:
         
-        point("Success")
+        print("Success")
         
     else:
     
