@@ -40,7 +40,7 @@ def find_mismatch(text):
         
         top = opening_brackets_stack.pop()
         
-        return f"(top.position+1)"    
+        return top.position+1    
     
     return "Success"
         
