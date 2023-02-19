@@ -32,7 +32,14 @@ def find_mismatch(text):
             
     
     
-   
+    if opening_brackets_stack:
+        
+        top = opening_brackets_stack.pop()
+        
+        return top.position+1    
+    
+    return "Success"
+        
 
 def main():
     text = input()
