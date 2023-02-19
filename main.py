@@ -25,7 +25,7 @@ def find_mismatch(text):
             
             if not opening_brackets_stack:
                 
-                return f"{i+1}"
+                return i+1
         
         else: 
 
@@ -33,14 +33,14 @@ def find_mismatch(text):
             
             if not are_matching(top.char, char):
                 
-                return f"{i+1}"
+                return i+1
     
     
     if opening_brackets_stack:
         
         top = opening_brackets_stack.pop()
         
-        return F"(top.position+1)"    
+        return f"(top.position+1)"    
     
     return "Success"
         
