@@ -51,16 +51,16 @@ def main():
     
 
 
-    mismatch = find_mismatch(text)
+        mismatch = find_mismatch(text)
     
-    if not mismatch:
+        if not mismatch:
         
-        print("Success")
+         print("Success")
         
-    else:
+        else:
     
     
-    print(mismatch)
+            print(mismatch)
     
 
 
