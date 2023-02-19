@@ -11,16 +11,16 @@ def are_matching(left, right):
 
 def find_mismatch(text):
     opening_brackets_stack = []
-    for i, char in enumerate(text):
+    for i, next in enumerate(text):
         
-        if char in "([{":
+        if next in "([{":
             
             # Process opening bracket, write your code here
-            opening_brackets_stack.append(Bracket(char,i))
+            opening_brackets_stack.append(Bracket(next,i+1))
         
           
 
-        if char in ")]}":
+        if next in ")]}":
             # Process closing bracket, write your code here
             
             if not opening_brackets_stack:
@@ -31,7 +31,7 @@ def find_mismatch(text):
 
             top = opening_brackets_stack.pop()
             
-            if not are_matching(top.char, char):
+            if not are_matching(top.char, next):
                 
                 return i+1
     
